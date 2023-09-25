@@ -1,0 +1,29 @@
+body,
+html {
+  font-family: "Jost", sans-serif;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+/* header */
+header .collapse .nav-link {
+  padding: 14px 0;
+  margin: 0 12px;
+  transition: all 0.5s;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  color: black;
+}
+.active{
+    color: green !important;
+}
