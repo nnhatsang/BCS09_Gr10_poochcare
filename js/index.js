@@ -68,7 +68,7 @@ function scrollFunction() {
 
 // count
 $(".counter").countUp({});
-// 
+//
 
 // ------------------- POP UP VIDEO ----------------
 
