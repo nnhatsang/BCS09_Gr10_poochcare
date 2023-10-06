@@ -62,93 +62,83 @@
     <header id="header" class="fixed-top nav-fixed">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Pooch Care</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="fa fa-times icon__close icon__toogler"></i>
-              <i class="fa-solid fa-bars icon__expand icon__toogler"></i>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarNavDropdown"
-            >
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">about</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">gallery</a>
-                </li>
+          <a class="navbar-brand" href="#">Pooch Care</a>
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa fa-times icon__close icon__toogler"></i>
+            <i class="fa-solid fa-bars icon__expand icon__toogler"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">about</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">gallery</a>
+              </li>
 
-                <li class="nav-item dropdown dropdown-toggle">
-                  <a
-                    class="nav-link"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <span class="">page</span>
-                  </a>
-                  <i class="fa-solid fa-chevron-down"></i>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">blog posts</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">landing page</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">contact</a>
-                </li>
-              </ul>
-              <ul class="nav-item nav-search">
-                <li>
-                  <div class="search__left">
-                    <div class="search__icon">
-                    <a href="#search" class="search">
-                      <i class="fa fa-search"></i
-                    ></a>
-                  </div>
-                  </div>
-                  <div id="search" class="pop-overlay">
-                    <div class="search-popup">
-                      <form
-                        action="https://wp.w3layouts.com/poochcare/"
-                        method="get"
-                        class="d-sm-flex"
-                      >
-                        <input
-                          type="search"
-                          name="s"
-                          placeholder="Search.."
-                          required="required"
-                          autofocus=""
-                        />
+              <li class="nav-item dropdown dropdown-toggle">
+                <a
+                  class="nav-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="">page</span>
+                </a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item nav-link" href="#">blog posts</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item nav-link" href="#">landing page</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">contact</a>
+              </li>
+            </ul>
+            <div class="search__left">
+              <div class="search__icon">
+                <a href="#search" class="search">
+                  <i class="fa fa-search"></i
+                ></a>
+                <div id="search" class="pop-overlay">
+                  <div class="search-popup">
+                    <form action="#url" method="get" class="d-sm-flex">
+                      <input
+                        type="search"
+                        name="s"
+                        placeholder="Search.."
+                        required="required"
+                        autofocus=""
+                      />
 
-                        <button type="submit">Search</button>
-                        <a class="close" href="#url">&times;</a>
-                      </form>
-                    </div>
+                      <button type="submit">Search</button>
+                      <a class="close" href="#url">×</a>
+                    </form>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
           <div id="screenmode">

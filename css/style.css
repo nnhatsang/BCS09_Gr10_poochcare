@@ -116,12 +116,8 @@ header a.nav-link:hover:before {
 .navbar-nav .nav-link:hover {
   color: var(--color-green);
 }
-.search {
-  position: absolute;
-  top: -16px;
-  left: 10px;
-}
-.nav-item .search i {
+
+.search__left .search i {
   width: 45px;
   height: 45px;
   line-height: 45px;
@@ -155,6 +151,7 @@ header a.nav-link:hover:before {
   border: 1px solid #ddd;
   min-width: 13rem;
   padding: 1rem 0 0.3rem;
+
   transform: translateX(-50px) translateY(-10px);
 }
 .nav-item .dropdown-menu::after {
@@ -173,8 +170,12 @@ header a.nav-link:hover:before {
   border-bottom: none;
 }
 .dropdown-item {
-  padding-left: 24px;
+  margin-left: 24px;
   width: fit-content;
+}
+
+.dropdown-item:hover {
+  background: none;
 }
 /* popup screen */
 
@@ -257,6 +258,9 @@ button.navbar-toggler.collapsed .icon__close {
 
 .navbar-toggler {
   padding: 0;
+  position: absolute;
+  right: 10px;
+  top: 15px;
 }
 .icon__toogler {
   width: 33px;
@@ -288,9 +292,9 @@ button.navbar-toggler.collapsed .icon__close {
 #switchButton .icon__moon {
   display: block;
 }
-/* #switchButton:focus {
+#switchButton:focus {
   outline: none;
-} */
+}
 
 /* carousel */
 #banner .item {
@@ -903,6 +907,7 @@ footer {
   background-color: #151515;
   color: #fafafa;
 }
+
 .dark header {
   background: #151515;
 }
@@ -948,7 +953,7 @@ footer {
   background: #151515;
 }
 .header-fixed-space-height {
-  margin-top: 90px;
+  height: 10px;
 }
 .dark .plan__card-left,
 .dark .plan__card-middle,
@@ -1037,16 +1042,13 @@ footer {
     margin-top: 80px;
   }
 
-  header .search__left {
+  header .collapse li.search__left .search__icon {
     width: 100%;
+    display: bl;
+    text-align: left;
     margin: 15px 0;
-    position: relative;
   }
-  header .search__left .search__icon .search {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+
   header.nav-fixed {
     height: auto;
     padding: 10px 0;
@@ -1054,7 +1056,7 @@ footer {
   #switchButton {
     position: absolute;
     right: 36px;
-    top: 13px;
+    top: 20px;
   }
   .navbar-nav {
     float: left;
@@ -1091,6 +1093,7 @@ footer {
     position: static;
     float: none;
   }
+
   .dropdown-item {
     line-height: 16px;
     width: auto;
@@ -1165,8 +1168,8 @@ footer {
 @media screen and (max-width: 800px) {
   #switchButton {
     position: absolute;
-    right: 40px;
-    top: 10px;
+    right: 36px;
+    top: 20px;
   }
   .plan__card-wrapper {
     width: 60%;
@@ -1356,4 +1359,34 @@ footer {
     box-shadow: 0 0 0 10px rgba(15, 162, 67, 0.25),
       0 0 0 20px rgba(15, 162, 67, 0.25), 0 0 0 40px rgba(50, 100, 245, 0);
   }
+}
+/* title__page */
+.title__page h2.title {
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+}
+.title__page ul.title__path {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #fff;
+  vertical-align: middle;
+}
+.title__page ul.title__path a {
+  color: var(--color-green);
+}
+.title__page::before {
+  content: "";
+  position: absolute;
+  background: #0c0c0c;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.6;
 }
