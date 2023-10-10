@@ -28,10 +28,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <!-- font dark mode icon -->
+    <!-- font icon dark mode -->
     <link
       href="https://unpkg.com/css.gg@2.0.0/icons/css/sun.css"
       rel="stylesheet"
@@ -55,14 +55,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style_main.css" />
+    <link rel="stylesheet" href="css/style_index.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/theme.css" />
   </head>
 
   <body id="myBody">
-    <header id="header" class="fixed-top nav-fixed">
+    <!-- header -->
+    <header id="header" class="main-header fixed-top nav-fixed">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#">Pooch Care</a>
+          <h1><a href="" class="navbar-brand">Pooch Care</a></h1>
           <button
             class="navbar-toggler collapsed"
             type="button"
@@ -72,85 +76,74 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="fa fa-times icon__close icon__toogler"></i>
-            <i class="fa-solid fa-bars icon__expand icon__toogler"></i>
+            <i class="fa fa-times icon__close"></i>
+            <i class="fa-solid fa-bars icon__expand"></i>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNavDropdown"
-          >
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a href="" class="nav-link active">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">about</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">gallery</a>
-              </li>
-
-              <li class="nav-item dropdown dropdown-toggle">
+              <li class="nav-item"><a href="" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Services</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Gallery</a></li>
+              <li class="nav-item dropdown menu-item-has-children">
                 <a
-                  class="nav-link"
                   href="#"
+                  class="nav-link dropdown-toggle-split me-1"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  >Pages</a
                 >
-                  <span class="">page</span>
-                </a>
-                <i class="fa-solid fa-chevron-down"></i>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item nav-link" href="#">blog posts</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item nav-link" href="#">landing page</a>
-                  </li>
-                </ul>
+                <!-- <i class="fa-solid fa-chevron-down"></i> -->
+
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item nav-link">Blog Posts</a>
+                  <a href="#" class="dropdown-item nav-link">Landing Pages</a>
+                </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">contact</a>
-              </li>
+              <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
             </ul>
-            <div class="search__left">
-              <div class="search__icon">
-                <a href="#search" class="search">
-                  <i class="fa fa-search"></i
-                ></a>
+            <ul class="navbar-nav search__right mt-lg-0 mt-2">
+              <li class="nav-item" title="Search">
+                <a href="#search" class="btn btn__search">
+                  <i class="fa fa-search"></i>
+                </a>
                 <div id="search" class="pop-overlay">
                   <div class="search-popup">
                     <form action="#url" method="get" class="d-sm-flex">
                       <input
                         type="search"
-                        name="s"
-                        placeholder="Search.."
+                        class="form-control"
+                        name=""
+                        id=""
+                        aria-describedby="helpId"
+                        placeholder="Search..."
                         required="required"
-                        autofocus=""
                       />
-
                       <button type="submit">Search</button>
-                      <a class="close" href="#url">×</a>
+                      <a class="close" href="#url">&times;</a>
                     </form>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
-          <div id="screenmode">
-            <button id="switchButton" title="Switch to change theme">
-              <i class="gg-moon icon__moon"></i>
-              <i class="gg-sun icon__sun"></i>
-            </button>
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="mode-container">
+                <i class="gg-sun"></i>
+                <i class="gg-moon"></i>
+              </div>
+            </label>
           </div>
         </nav>
       </div>
     </header>
     <div class="header-fixed-space-height"></div>
+    <!-- section_carousel -->
     <section id="banner">
       <div class="banner owl-carousel owl-theme">
         <div class="item">
@@ -176,7 +169,7 @@
         <div class="item item__2">
           <div class="banner__content banner_two">
             <div class="container">
-              <div class="text-left banner__info ml-lg-auto">
+              <div class="text-left banner__info ms-lg-auto">
                 <h5>Delivering happiness for Pets</h5>
                 <p>For the love of pets</p>
                 <a class="btn btn-style btn-white mt-sm-5 mt-4 mr-2" href="#">
@@ -214,11 +207,11 @@
           <!-- before is here  -->
           <div class="banner__content banner__two">
             <div class="container">
-              <div class="text-left banner__info ml-lg-auto">
+              <div class="text-left banner__info ms-lg-auto">
                 <h5 class="BannerSlider">Delivering happiness for Pets</h5>
                 <p>For the love of pets</p>
                 <a
-                  class="btn btn-style btn-white mt-sm-5 mt-4 mr-2"
+                  class="btn btn-style btn-white mt-sm-5 mt-4 me-2"
                   href="about"
                 >
                   Read More</a
@@ -232,12 +225,13 @@
         </div>
       </div>
     </section>
+    <!-- section about -->
     <section id="about" class="py-5">
       <div class="container py-md-5 py-3">
-        <div class="about__content text-center mx-auto">
-          <h6 class="sub__heading">About us</h6>
-          <h3 class="heading">We love your pets like they are our own</h3>
-          <p class="my-3 content">
+        <div class="align-items-center mx-auto about_item text-center">
+          <h6 class="sub-title">About Us</h6>
+          <h3 class="hny-title">We love your pets like they are our own</h3>
+          <p class="my-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur hic odio voluptatem tenetur consequatur. Vestibulum
             ante ipsum primis in faucibus orci luctus et ultrices posuere
@@ -248,15 +242,16 @@
         </div>
       </div>
     </section>
-    <section id="feature" class="py-5">
-      <div class="container py-3">
-        <div class="row">
-          <div class="col-lg-4 col-sm-6">
-            <div class="box">
-              <div class="box__icon">
+    <!-- section feature -->
+    <section id="features" class="py-5">
+      <div class="container pt-lg-5 pt-md-4">
+        <div class="justify-content-center row">
+          <div class="col-lg-4 col-sm-6 grid-feature">
+            <div class="area-box">
+              <div class="icon">
                 <i class="fa-regular fa-snowflake"></i>
               </div>
-              <h4><a href="#" class="box__title"> Dog Walking</a></h4>
+              <h4><a href="#" class="title-head"> Dog Walking</a></h4>
               <p>
                 Vivamus a ligula quam. Ut blandit eu leo non. Duis sed doloramet
                 laoreet. Lorem ipsum dolor sit amet Ut blandit eu leo.
@@ -264,9 +259,9 @@
               <a href="#url" class="read"> Read More</a>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="box">
-              <div class="box__icon">
+          <div class="col-lg-4 col-sm-6 grid-feature">
+            <div class="area-box">
+              <div class="icon">
                 <i class="fa fa-cutlery"></i>
               </div>
               <h4><a href="#" class="box__title">Healthy Meals</a></h4>
@@ -277,9 +272,9 @@
               <a href="#url" class="read"> Read More</a>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="box">
-              <div class="box__icon">
+          <div class="col-lg-4 col-sm-6 grid-feature">
+            <div class="area-box">
+              <div class="icon">
                 <i class="fa fa-sign-language"></i>
               </div>
               <h4><a href="#" class="box__title">Pet Sitting</a></h4>
@@ -290,9 +285,9 @@
               <a href="#url" class="read"> Read More</a>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="box">
-              <div class="box__icon">
+          <div class="col-lg-4 col-sm-6 grid-feature">
+            <div class="area-box">
+              <div class="icon">
                 <i class="fa fa-sitemap"></i>
               </div>
               <h4><a href="#" class="box__title">Dog Activities</a></h4>
@@ -303,9 +298,9 @@
               <a href="#url" class="read"> Read More</a>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="box">
-              <div class="box__icon">
+          <div class="col-lg-4 col-sm-6 grid-feature">
+            <div class="area-box">
+              <div class="icon">
                 <i class="fa fa-shower"></i>
               </div>
               <h4><a href="#" class="box__title"> Pet Daycare</a></h4>
@@ -313,12 +308,12 @@
                 Vivamus a ligula quam. Ut blandit eu leo non. Duis sed doloramet
                 laoreet. Lorem ipsum dolor sit amet Ut blandit eu leo.
               </p>
-              <a href="#" class="read"> Read More</a>
+              <a href="#url" class="read"> Read More</a>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="box">
-              <div class="box__icon">
+          <div class="col-lg-4 col-sm-6 grid-feature">
+            <div class="area-box">
+              <div class="icon">
                 <i class="fa fa-user-md"></i>
               </div>
               <h4><a href="#" class="box__title"> Pet Grooming</a></h4>
@@ -326,61 +321,62 @@
                 Vivamus a ligula quam. Ut blandit eu leo non. Duis sed doloramet
                 laoreet. Lorem ipsum dolor sit amet Ut blandit eu leo.
               </p>
-              <a href="#" class="read"> Read More</a>
+              <a href="#url" class="read"> Read More</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="service" class="py-5">
+    <!-- services section-->
+    <section id="services" class="py-5">
       <div class="container py-md-5 py-3">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-6 mb-lg-0 mb-5 pl-lg-5">
+        <div class="service-grid row justify-content-center align-items-center">
+          <div class="imgae-services col-lg-6 mb-lg-0 mb-5 ps-lg-5">
             <img
-              src="./image/ab.jpg"
-              class="img-fluid rounded-10px"
-              alt="offer-photo"
+              src="image/ab.jpg"
+              alt="ab"
+              class="rounded-2 img-fluid w-100 h-auto"
             />
           </div>
-          <div class="col-lg-6">
-            <p class="sub__heading mb-0">Why Choose Us</p>
-            <h2 class="heading mb-0">What We Offer for You</h2>
-            <p class="content">
+          <div class="text-services col-lg-6">
+            <h6 class="sub-title mb-0">Why Choose us</h6>
+            <h3 class="hny-title mb-0">What We Offer For You</h3>
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud.Lorem ipsum dolor sit amet,
               consectetur adipisicingelit.
             </p>
-            <ul class="list-unstyled">
+            <ul class="list-services p-0">
               <li class="d-flex justify-content-start align-items-center my-3">
-                <i class="fa fa-check offer__icon color-green"></i>
-                <p class="m-0 font-weight-bolder">Certified Groomer</p>
+                <span class="fa fa-check offer__icon text-success"></span>
+                <p class="m-0 fw-bolder text-dark">Certified Groomer</p>
               </li>
               <li class="d-flex justify-content-start align-items-center my-3">
-                <i class="fa fa-check offer__icon color-green"></i>
-                <p class="m-0 font-weight-bolder">10 Years of Experience</p>
+                <span class="fa fa-check offer__icon text-success"></span>
+                <p class="m-0 fw-bolder text-dark">10 Years of Experience</p>
               </li>
               <li class="d-flex justify-content-start align-items-center my-3">
-                <i class="fa fa-check offer__icon color-green"></i>
-
-                <p class="m-0 font-weight-bolder">Pet Lover</p>
+                <span class="fa fa-check offer__icon text-success"></span>
+                <p class="m-0 fw-bolder text-dark">Pet Lover</p>
               </li>
               <li class="d-flex justify-content-start align-items-center my-3">
-                <i class="fa fa-check offer__icon color-green"></i>
-                <p class="m-0 font-weight-bolder">Customer Supports</p>
+                <i class="fa fa-check offer__icon text-success"></i>
+                <p class="m-0 fw-bolder text-dark">Customer Supports</p>
               </li>
               <li class="d-flex justify-content-start align-items-center my-3">
-                <i class="fa fa-check offer__icon color-green"></i>
-                <p class="m-0 font-weight-bolder">Veterinary Help</p>
+                <span class="fa fa-check offer__icon text-success"></span>
+                <p class="m-0 fw-bolder text-dark">Veterinary Help</p>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    <section id="number" class="py-5 bg-green">
-      <div class="container py-lg-0 py-3">
-        <div class="row justify-content-around">
+    <!-- section number -->
+    <section class="py-5" id="number">
+      <div class="py-3 container py-lg-0 py-3">
+        <div class="row justify-content-center pb-lg-3">
           <div class="col-6 col-lg-3">
             <p
               class="mb-0 text-center number__num counter"
@@ -389,7 +385,7 @@
             >
               730
             </p>
-            <p class="mb-0 text-center number__text">Happy Clients</p>
+            <h4 class="mb-0 text-center number__text">Happy Clients</h4>
           </div>
           <div class="col-6 col-lg-3">
             <p
@@ -399,7 +395,7 @@
             >
               80
             </p>
-            <p class="mb-0 text-center number__text">Professionals</p>
+            <h4 class="mb-0 text-center number__text">Professionals</h4>
           </div>
           <div class="col-6 col-lg-3 mt-lg-0 mt-5">
             <p
@@ -409,7 +405,7 @@
             >
               812
             </p>
-            <p class="mb-0 text-center number__text">Adopted Pets</p>
+            <h4 class="mb-0 text-center number__text">Adopted Pets</h4>
           </div>
           <div class="col-6 col-lg-3 mt-lg-0 mt-5">
             <p
@@ -419,105 +415,107 @@
             >
               90
             </p>
-            <p class="mb-0 text-center number__text">Awards</p>
+            <h4 class="mb-0 text-center number__text">Awards</h4>
           </div>
         </div>
       </div>
     </section>
-    <section id="packages" class="py-5">
+    <!-- section plain -->
+    <section id="plan" class="py-5">
       <div class="pt-lg-4 pt-md-3 pb-lg-5 pb-md-4">
         <div class="container">
-          <div class="heading mx-auto text-center">
-            <h6 class="sub__heading fw-bold">Our Plans</h6>
-            <h3 class="mb-5 heading text-center">Affordable Packages</h3>
+          <div class="text-center mx-auto">
+            <h6 class="sub-title fw-bold text-capitalize">Our plans</h6>
+            <h3 class="mb-5 hny-title">Affordable Packages</h3>
+          </div>
+          <div
+            class="plan__card-wrapper row justify-content-center align-items-center"
+          >
             <div
-              class="plan__card-wrapper row justify-content-center align-items-center"
+              class="plan__card-left col-lg-4 d-flex flex-column align-items-center justify-content-center"
             >
-              <div
-                class="plan__card-left col-lg-4 d-flex flex-column align-items-center justify-content-center"
-              >
-                <div class="plan__card-top">
-                  <h3>Free Package</h3>
-                  <p>
-                    <span><label>$</label>0</span>/month
-                  </p>
-                </div>
-                <div
-                  class="plan__card-bottom d-flex align-items-center justify-content-center flex-column"
-                >
-                  <ul class="list-unstyled text-center">
-                    <li>5 Dog Walk</li>
-                    <li>3 Vet Visit</li>
-                    <li>3 Pet Spa</li>
-                    <li>Free Supports</li>
-                    <li>Customer Support</li>
-                  </ul>
-                  <button class="plan__button">Buy Now</button>
-                </div>
+              <div class="plan__card-top">
+                <h3>Free Package</h3>
+                <p>
+                  <span><label>$</label>0</span>/month
+                </p>
               </div>
-
               <div
-                class="plan__card-middle col-lg-4 d-flex flex-column align-items-center justify-content-center"
+                class="plan__card-bottom d-flex align-items-center justify-content-center flex-column"
               >
-                <div class="plan__card-top">
-                  <div class="text-center">
-                    <p class="plan__card-save">SAVE 10%</p>
-                  </div>
-                  <h3 class="text-white">Standard Package</h3>
-                  <p class="text-white">
-                    <span class="text-white"><label>$</label>39</span>/month
-                  </p>
-                </div>
-                <div
-                  class="plan__card-bottom d-flex align-items-center justify-content-center flex-column"
-                >
-                  <ul class="list-unstyled text-center different">
-                    <li>5 Dog Walk</li>
-                    <li>3 Vet Visit</li>
-                    <li>3 Pet Spa</li>
-                    <li>Free Supports</li>
-                    <li>Customer Support</li>
-                  </ul>
-                  <button class="plan__button different">Get Started</button>
-                </div>
+                <ul class="list-unstyled text-center">
+                  <li>5 Dog Walk</li>
+                  <li>3 Vet Visit</li>
+                  <li>3 Pet Spa</li>
+                  <li>Free Supports</li>
+                  <li>Customer Support</li>
+                </ul>
+                <button class="plan__button btn">Buy Now</button>
               </div>
+            </div>
 
+            <div
+              class="plan__card-middle col-lg-4 d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="plan__card-top">
+                <div class="text-center">
+                  <p class="plan__card-save">SAVE 10%</p>
+                </div>
+                <h3 class="text-white">Standard Package</h3>
+                <p class="text-white">
+                  <span class="text-white"><label>$</label>39</span>/month
+                </p>
+              </div>
               <div
-                class="plan__card-right col-lg-4 d-flex flex-column align-items-center justify-content-center"
+                class="plan__card-bottom d-flex align-items-center justify-content-center flex-column"
               >
-                <div class="plan__card-top">
-                  <h3>Pro Package</h3>
-                  <p>
-                    <span><label>$</label>89</span>/month
-                  </p>
-                </div>
-                <div
-                  class="plan__card-bottom d-flex align-items-center justify-content-center flex-column"
-                >
-                  <ul class="list-unstyled text-center">
-                    <li>5 Dog Walk</li>
-                    <li>3 Vet Visit</li>
-                    <li>3 Pet Spa</li>
-                    <li>Free Supports</li>
-                    <li>Customer Support</li>
-                  </ul>
-                  <button class="plan__button">Buy Now</button>
-                </div>
+                <ul class="list-unstyled text-center different">
+                  <li>5 Dog Walk</li>
+                  <li>3 Vet Visit</li>
+                  <li>3 Pet Spa</li>
+                  <li>Free Supports</li>
+                  <li>Customer Support</li>
+                </ul>
+                <button class="plan__button btn">Get Started</button>
+              </div>
+            </div>
+
+            <div
+              class="plan__card-right col-lg-4 d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="plan__card-top">
+                <h3>Pro Package</h3>
+                <p>
+                  <span><label>$</label>89</span>/month
+                </p>
+              </div>
+              <div
+                class="plan__card-bottom d-flex align-items-center justify-content-center flex-column"
+              >
+                <ul class="list-unstyled text-center">
+                  <li>5 Dog Walk</li>
+                  <li>3 Vet Visit</li>
+                  <li>3 Pet Spa</li>
+                  <li>Free Supports</li>
+                  <li>Customer Support</li>
+                </ul>
+                <button class="plan__button btn">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="nutrition" class="py-5">
-      <div class="pb-lg-5">
-        <div class="container">
-          <div class="nutrition__wrapper mx-auto">
-            <p class="text-center sub__heading">Better pet nutrition.</p>
-            <h2 class="text-center heading">
+    <!-- section NUTRITION -->
+    <section class="py-5" id="nutrition">
+      <div class="container py-lg-5">
+        <div class="text-center nutri-section mx-auto">
+          <div class="nutri-wrapper">
+            <h6 class="sub-title">Better pet nutrition.</h6>
+            <h3 class="hny-title">
               The finest fresh food and all your pet needs.
-            </h2>
-            <p class="content text-center">
+            </h3>
+            <p class="text-center">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.Lorem
               ipsum dolor sit amet elit consec tetur adipisi elit. Lorem ipsum
               dolor sit amet elit consec tetur adipisi elit. Iure voluptatibus
@@ -555,239 +553,208 @@
         </div>
       </div>
     </section>
+    <!-- section feeback -->
     <section id="feedback" class="py-5">
       <div class="container py-lg-4 py-md-3 pb-lg-0">
-        <div class="heading text-center mx-auto">
-          <h6 class="sub-title text-center">itemmonials</h6>
-          <h3 class="mb-md-5 mb-4">Happy Clients & Feedbacks</h3>
+        <div class="text-center mx-auto">
+          <h6 class="sub-title">TESTIMONIALS</h6>
+          <h3 class="hny-title mb-md-5 mb-4">Happy Clients & Feedback</h3>
         </div>
-        <div class="item__content owl-carousel owl-theme">
-          <div class="item__item item">
-            <div class="item__quote">
-              <blockquote>
-                <q
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Velit beatae laudantium voluptate rem ullam dolore nisi
-                  voluptatibus esse quasi, doloribus tempora. Dolores molestias
-                  adipisci dolor sit amet!.</q
-                >
-              </blockquote>
-            </div>
-            <div class="item__member d-flex align-items-center">
-              <img src="./image/f1.jpg" alt="" />
-              <div class="item__tag">
-                <h3>John Wilson</h3>
-                <span>Example City</span>
+        <div class="test-grid">
+          <div class="owl-carousel owl-theme owl-two">
+            <div class="item">
+              <div class="testi-content">
+                <div class="test-quoute">
+                  <blockquote>
+                    <q
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Velit beatae laudantium voluptate rem ullam dolore nisi
+                      voluptatibus esse quasi, doloribus tempora. Dolores
+                      molestias adipisci dolor sit amet!.</q
+                    >
+                  </blockquote>
+                </div>
+                <div class="item__member d-flex align-items-center">
+                  <img src="./image/f1.jpg" alt="" class="img-fluid" />
+                  <div class="item__tag">
+                    <h3>John Wilson</h3>
+                    <span>Example City</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item__item item">
-            <div class="item__quote">
-              <blockquote>
-                <q
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Velit beatae laudantium voluptate rem ullam dolore nisi
-                  voluptatibus esse quasi, doloribus tempora. Dolores molestias
-                  adipisci dolor sit amet!.</q
-                >
-              </blockquote>
-            </div>
-            <div class="item__member d-flex align-items-center">
-              <img src="./image/f2.jpg" alt="" />
-              <div class="item__tag">
-                <h3>Julia Sakura</h3>
-                <span>Example City</span>
+            <div class="item">
+              <div class="testi-content">
+                <div class="test-quoute">
+                  <blockquote>
+                    <q
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Velit beatae laudantium voluptate rem ullam dolore nisi
+                      voluptatibus esse quasi, doloribus tempora. Dolores
+                      molestias adipisci dolor sit amet!.</q
+                    >
+                  </blockquote>
+                </div>
+                <div class="item__member d-flex align-items-center">
+                  <img src="./image/f1.jpg" alt="" class="img-fluid" />
+                  <div class="item__tag">
+                    <h3>John Wilson</h3>
+                    <span>Example City</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item__item item">
-            <div class="item__quote">
-              <blockquote>
-                <q
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Velit beatae laudantium voluptate rem ullam dolore nisi
-                  voluptatibus esse quasi, doloribus tempora. Dolores molestias
-                  adipisci dolor sit amet!.</q
-                >
-              </blockquote>
-            </div>
-            <div class="item__member d-flex align-items-center">
-              <img src="./image/f3.jpg" alt="" />
-              <div class="item__tag">
-                <h3>Roy Linderson</h3>
-                <span>Example City</span>
+            <div class="item">
+              <div class="testi-content">
+                <div class="test-quoute">
+                  <blockquote>
+                    <q
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Velit beatae laudantium voluptate rem ullam dolore nisi
+                      voluptatibus esse quasi, doloribus tempora. Dolores
+                      molestias adipisci dolor sit amet!.</q
+                    >
+                  </blockquote>
+                </div>
+                <div class="item__member d-flex align-items-center">
+                  <img src="./image/f1.jpg" alt="" class="img-fluid" />
+                  <div class="item__tag">
+                    <h3>John Wilson</h3>
+                    <span>Example City</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item__item item">
-            <div class="item__quote">
-              <blockquote>
-                <q
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Velit beatae laudantium voluptate rem ullam dolore nisi
-                  voluptatibus esse quasi, doloribus tempora. Dolores molestias
-                  adipisci dolor sit amet!.</q
-                >
-              </blockquote>
-            </div>
-            <div class="item__member d-flex align-items-center">
-              <img src="./image/f4.jpg" alt="" />
-              <div class="item__tag">
-                <h3>Mike Thyson</h3>
-                <span>Example City</span>
+            <div class="item">
+              <div class="testi-content">
+                <div class="test-quoute">
+                  <blockquote>
+                    <q
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Velit beatae laudantium voluptate rem ullam dolore nisi
+                      voluptatibus esse quasi, doloribus tempora. Dolores
+                      molestias adipisci dolor sit amet!.</q
+                    >
+                  </blockquote>
+                </div>
+                <div class="item__member d-flex align-items-center">
+                  <img src="./image/f1.jpg" alt="" class="img-fluid" />
+                  <div class="item__tag">
+                    <h3>John Wilson</h3>
+                    <span>Example City</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item__item item">
-            <div class="item__quote">
-              <blockquote>
-                <q
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Velit beatae laudantium voluptate rem ullam dolore nisi
-                  voluptatibus esse quasi, doloribus tempora. Dolores molestias
-                  adipisci dolor sit amet!.</q
-                >
-              </blockquote>
-            </div>
-            <div class="item__member d-flex align-items-center">
-              <img src="./image/f1.jpg" alt="" />
-              <div class="item__tag">
-                <h3>Laura Gill</h3>
-                <span>Example City</span>
-              </div>
-            </div>
-          </div>
-          <div class="item__item item">
-            <div class="item__quote">
-              <blockquote>
-                <q
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Velit beatae laudantium voluptate rem ullam dolore nisi
-                  voluptatibus esse quasi, doloribus tempora. Dolores molestias
-                  adipisci dolor sit amet!.</q
-                >
-              </blockquote>
-            </div>
-            <div class="item__member d-flex align-items-center">
-              <img src="./image/f2.jpg" alt="" />
-              <div class="item__tag">
-                <h3>Smith Johnson</h3>
-                <span>Example City</span>
-              </div>
-            </div>
-          </div>
-          <div class="item__item item">
-            <div class="item__quote">
-              <blockquote>
-                <q
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Velit beatae laudantium voluptate rem ullam dolore nisi
-                  voluptatibus esse quasi, doloribus tempora. Dolores molestias
-                  adipisci dolor sit amet!.</q
-                >
-              </blockquote>
-            </div>
-            <div class="item__member d-flex align-items-center">
-              <img src="./image/f2.jpg" alt="" />
-              <div class="item__tag">
-                <h3>Smith Johnson</h3>
-                <span>Example City</span>
-              </div>
-            </div>
-          </div>
-          <div class="item__item item">
-            <div class="item__quote">
-              <blockquote>
-                <q
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Velit beatae laudantium voluptate rem ullam dolore nisi
-                  voluptatibus esse quasi, doloribus tempora. Dolores molestias
-                  adipisci dolor sit amet!.</q
-                >
-              </blockquote>
-            </div>
-            <div class="item__member d-flex align-items-center">
-              <img src="./image/f2.jpg" alt="" />
-              <div class="item__tag">
-                <h3>Smith Johnson</h3>
-                <span>Example City</span>
+            <div class="item">
+              <div class="testi-content">
+                <div class="test-quoute">
+                  <blockquote>
+                    <q
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Velit beatae laudantium voluptate rem ullam dolore nisi
+                      voluptatibus esse quasi, doloribus tempora. Dolores
+                      molestias adipisci dolor sit amet!.</q
+                    >
+                  </blockquote>
+                </div>
+                <div class="item__member d-flex align-items-center">
+                  <img src="./image/f1.jpg" alt="" class="img-fluid" />
+                  <div class="item__tag">
+                    <h3>John Wilson</h3>
+                    <span>Example City</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!--  contact-->
     <section id="contact" class="py-5">
       <div class="container py-md-4 py-3 text-center">
-        <div class="contact__content mx-auto">
-          <h3 class="heading mb-4">Stay Updated!</h3>
-          <p class="title">
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis
-            sodales quis. Integer sit amet mattis quam.
-          </p>
-          <div class="contact__form">
-            <form
-              action=""
-              class="d-md-flex flex-md-wrap justify-content-between"
-            >
-              <input
-                class=""
-                type="email"
-                name=""
-                id=""
-                placeholder="Enter your email..."
-              />
-              <button class="btn btn-success" type="submit">Subscribe</button>
-            </form>
+        <div class="row my-lg-4 mt-4">
+          <div class="contact__content mx-auto col-lg-9 col-md-10">
+            <h3 class="heading mb-4">Stay Updated!</h3>
+            <p class="title">
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus
+              turpis sodales quis. Integer sit amet mattis quam.
+            </p>
+            <div class="contact__form">
+              <form
+                action=""
+                class="d-md-flex flex-wrap justify-content-between pt-2 mt-5"
+              >
+                <input
+                  class=""
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Enter your email..."
+                />
+                <button class="btn btn-success" type="submit">Subscribe</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <footer id="footer">
-      <div class="footer__main">
-        <div class="container">
-          <div class="footer__content row">
-            <div class="footer__groupitem1 col-sm-12 col-md-5 col-lg-6">
-              <div class="footer__item">
-                <h4>Contact information</h4>
+    <!-- footer -->
+    <footer>
+      <div class="container py-lg-3">
+        <div class="row footer__content">
+          <div class="col-lg-6 col-md-5 mt-5 foot_item1">
+            <h6 class="foot__title">Contact information</h6>
+            <ul>
+              <li>
+                <p>
+                  <strong>Address</strong>
+                  : #135 block, Barnard St. Brooklyn, London 10036, UK
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Phone</strong>
+                  : <a href="tel:+(12)234-11-24"> +(12)234-11-24</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Email</strong>
+                  :
+                  <a href="mailto:example@mail.com">example@mail.com</a>
+                </p>
+              </li>
+            </ul>
+            <div class="mt-3 foot_social">
+              <ul class="social_icon">
+                <li class="facebook">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="twitter">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="dribbble">
+                  <a href="#"><i class="fab fa-dribbble"></i></a>
+                </li>
+                <li class="google">
+                  <a href="#"><i class="fab fa-google"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-7">
+            <div class="row">
+              <div class="col-sm-4 col-6 mt-5 foot_item2">
+                <h6 class="foot__title">Archives</h6>
                 <ul>
-                  <li>
-                    <span>Address</span> : #135 block, Barnard St. Brooklyn,
-                    London 10036, UK
-                  </li>
-                  <li>
-                    <span>Phone</span> :
-                    <a href="tel:122341124">+(12)234-11-24</a>
-                  </li>
-                  <li>
-                    <span>Email</span> :
-                    <a href="mailto:example@mail.com">example@mail.com</a>
-                  </li>
-                  <ul class="d-flex footer__social">
-                    <li class="facebook">
-                      <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li class="twitter">
-                      <a href="#"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li class="dribbble">
-                      <a href="#"><i class="fab fa-dribbble"></i></a>
-                    </li>
-                    <li class="google">
-                      <a href="#"><i class="fab fa-google"></i></a>
-                    </li>
-                  </ul>
+                  <li><a href="#">December 2020</a></li>
                 </ul>
               </div>
-            </div>
-            <div class="footer__groupitem2 col-sm-12 col-md-7 col-lg-6 row">
-              <div class="footer__item col-6 col-sm-4">
-                <h4>Archives</h4>
-                <a href="#">December 2020</a>
-              </div>
-              <div class="footer__item col-6 col-sm-4">
-                <h4>Categories</h4>
+              <div class="col-sm-4 col-6 mt-5">
+                <h6 class="foot__title">Categories</h6>
                 <ul>
                   <li><a href="#">Animals</a></li>
                   <li><a href="#">Pets</a></li>
@@ -795,8 +762,8 @@
                   <li><a href="#">Uncategorized</a></li>
                 </ul>
               </div>
-              <div class="footer__item col-6 col-sm-4">
-                <h4>Meta</h4>
+              <div class="col-sm-4 col-6 mt-5">
+                <h6 class="foot__title">Meta</h6>
                 <ul>
                   <li><a href="#">Log in</a></li>
                   <li><a href="#">Entries feed</a></li>
@@ -808,9 +775,12 @@
           </div>
         </div>
       </div>
-      <div class="footer__bottom">
-        <div class="container">
-          <p>© 2023 All Rights Reserved by <a href="#">W3Layouts</a>.</p>
+      <div class="align-center py-lg-4 py-3 mt-5">
+        <div class="container CopyRights">
+          <p class="text-center">
+            &copy; 2023 All Rights Reserved by
+            <a href="https://w3layouts.com/"> W3Layouts.</a>
+          </p>
         </div>
       </div>
     </footer>

@@ -1,10 +1,23 @@
-document.getElementById("switchButton").onclick = function () {
-  document.getElementById("myBody").classList.toggle("dark");
+// document.getElementById("switchButton").onclick = function () {
+//   document.getElementById("myBody").classList.toggle("dark");
+// };
+
+window.onscroll = function () {
+  scrollFunction();
 };
 
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").classList.add("nav-fixed");
+    document.querySelector(".toTop").classList.remove("d-none");
+  } else {
+    document.getElementById("header").classList.remove("nav-fixed");
+    document.querySelector(".toTop").classList.add("d-none");
+  }
+}
 // carousel
-// OWL CAROUSEL
-$(".item__content").owlCarousel({
+
+$(".owl-two").owlCarousel({
   loop: false,
   margin: 20,
   nav: false,
@@ -22,7 +35,7 @@ $(".item__content").owlCarousel({
     },
   },
 });
-// banner
+// // banner
 $(".banner").owlCarousel({
   loop: true,
   margin: 0,
@@ -52,22 +65,9 @@ $(".banner").owlCarousel({
   },
 });
 
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("header").classList.add("nav-fixed");
-    document.querySelector(".toTop").classList.remove("d-none");
-  } else {
-    document.getElementById("header").classList.remove("nav-fixed");
-    document.querySelector(".toTop").classList.add("d-none");
-  }
-}
-
 // count
 $(".counter").countUp({});
+
 //
 
 // ------------------- POP UP VIDEO ----------------
