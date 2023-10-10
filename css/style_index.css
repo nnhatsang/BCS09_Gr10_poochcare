@@ -450,9 +450,7 @@ h4.number__text {
   margin-top: 80px;
 }
 /* contact */
-.contact__content {
-  width: 60%;
-}
+
 .contact__form input {
   background: #fff;
   border: 1px solid #ced4da;
@@ -462,9 +460,11 @@ h4.number__text {
   font-size: 1rem;
   flex-basis: 70%;
   font-size: 16px;
+ 
 }
 .contact__form button {
   flex-basis: 27%;
+  line-height: 32px;
 }
 .contact__form input:focus-visible {
   border: 1px solid var(--color-green);
