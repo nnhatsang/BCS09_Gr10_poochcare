@@ -1,0 +1,66 @@
+.banner-link::after,
+.history-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 4, 8, 0.568);
+  z-index: -1;
+  height: 100%;
+  /* opacity: 0.6; */
+}
+h2.title {
+  color: white;
+  font-weight: 600;
+  font-size: 50px;
+}
+h4 {
+  font-size: 22px;
+  line-height: 32px;
+  opacity: 0.9;
+}
+ul.link-custom-path {
+  position: relative;
+  display: inline-block;
+  font-style: 1.2em;
+  color: white;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+ul.link-custom-path a {
+  color: var(--color-green);
+}
+/* section history */
+.history-content {
+  margin-left: auto;
+  max-width: 640px;
+  text-align: left;
+}
+.history-grids {
+  margin-top: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+/* section choose */
+.choose-icon span.fa {
+  color: var(--color-green);
+  margin-top: 4px;
+  vertical-align: super;
+  font-size: 44px;
+  text-align: center;
+  align-items: center;
+}
+h6 a {
+  color: var(--color-black);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+h6 a:hover {
+  color: var(--color-green);
+}
+.choose-content-right {
+  margin-top: 50px;
+}
+/* .choose-content-right p{font-size: 16px;} */

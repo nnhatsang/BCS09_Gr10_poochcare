@@ -26,6 +26,7 @@ p {
   font-size: 1.2em;
   line-height: 28px;
   color: var(--color-gray);
+  margin: 0;
 }
 a,
 a:hover {
@@ -362,9 +363,9 @@ footer ul li a:hover {
 }
 .CopyRights p {
   line-height: 28px;
+  font-size: 16px;
   color: var(--color-gray);
   margin-bottom: 0;
-  padding: 1.5rem 0;
 }
 .CopyRights p a {
   color: #c72f22;
@@ -376,27 +377,7 @@ footer ul li a:hover {
 
 /* dark */
 
-/* responsive */
-/* @media screen and (max-width: 1366px) {
- #banner .banner__info h5 {
-    font-size: clamp(32px, 5vw, 52px);
-    line-height: clamp(42px, 5vw, 62px);
-  }
-}
 
-@media screen and (max-width: 991.98px) {
- #banner .banner__info h5 {
-    font-size: clamp(32px, 5vw, 48px);
-    line-height: clamp(42px, 5vw, 55px);
-  }
-}
-
-@media screen and (max-width: 480px) {
- #banner .banner__info h5 {
-    font-size: clamp(24px, 5vw, 32px);
-    line-height: clamp(32px, 5vw, 42px);
-  }
-} */
 
 /* --------- KEYFRAME -  ANIMATION ------------*/
 @keyframes ripple {
