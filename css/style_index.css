@@ -30,8 +30,8 @@
   background-color: rgba(12, 12, 12, 0.6);
 }
 .banner__info h5 {
-  font-size: clamp(24px, 5vw, 66px);
-  line-height: clamp(32px, 5vw, 76px);
+  font-size: clamp(26px, 40px, 66px);
+  line-height: clamp(32px, 48px, 76px);
   /* font-size: 66px;
   line-height: 76px; */
   font-weight: 700;
