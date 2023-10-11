@@ -55,6 +55,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- popup -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+      integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/style_main.css" />
     <link rel="stylesheet" href="css/style_index.css" />
     <link rel="stylesheet" href="css/responsive.css" />
@@ -84,7 +92,9 @@
               <li class="nav-item">
                 <a href="" class="nav-link active">Home</a>
               </li>
-              <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
               <li class="nav-item"><a href="" class="nav-link">Services</a></li>
               <li class="nav-item"><a href="" class="nav-link">Gallery</a></li>
               <li class="nav-item dropdown menu-item-has-children">
@@ -529,13 +539,17 @@
                 class="img-fluid rounded-3"
               />
               <div class="nutrition__play-button position-absolute">
-                <i class="fa fa-play rounded-circle"></i>
+                <a
+                  href="#small-dialog"
+                  class="open-popup-link popup-with-zoom-anim"
+                  ><i class="fa fa-play rounded-circle"></i
+                ></a>
               </div>
             </div>
           </div>
 
           <!-- pop up video when having click event -->
-          <div class="pop-up-video d-none position-fixed p-3">
+          <!-- <div class="pop-up-video d-none position-fixed p-3">
             <div class="d-flex align-items-center justify-content-center">
               <div class="position-relative">
                 <iframe
@@ -549,6 +563,17 @@
                 </iframe>
                 <button class="button__close position-absolute">x</button>
               </div>
+            </div>
+          </div> -->
+          <div class="pop-up-video d-none position-fixed p-3">            
+
+            <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+              <iframe
+                src="https://player.vimeo.com/video/101587706?h=187bfc0989"
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen=""
+              ></iframe>
             </div>
           </div>
         </div>
@@ -823,6 +848,13 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
       integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- popup -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"
+      integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
