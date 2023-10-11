@@ -458,7 +458,6 @@ h4.number__text {
   font-size: 1rem;
   flex-basis: 70%;
   font-size: 16px;
- 
 }
 .contact__form button {
   flex-basis: 27%;
@@ -468,7 +467,6 @@ h4.number__text {
   border: 1px solid var(--color-green);
   outline: none;
 }
-
 
 /* popup video */
 #small-dialog {

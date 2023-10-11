@@ -88,6 +88,9 @@ header .nav-link {
 .navbar-nav .nav-link.active {
   color: var(--color-green);
 }
+.navbar-nav a.nav-link:hover{
+  color: #189a46;
+}
 .nav-item {
   transition: all 0.5s ease;
   position: relative;

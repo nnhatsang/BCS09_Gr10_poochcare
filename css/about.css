@@ -32,6 +32,7 @@ ul.link-custom-path a {
   color: var(--color-green);
 }
 /* section history */
+
 .history-content {
   margin-left: auto;
   max-width: 640px;
@@ -64,3 +65,55 @@ h6 a:hover {
   margin-top: 50px;
 }
 /* .choose-content-right p{font-size: 16px;} */
+
+/* team */
+/* .team-item a img {
+  display: block;
+} */
+#team {
+  background: rgba(147, 107, 232, 0.05);
+}
+.team-item {
+  margin-bottom: 44px;
+  transition: transform 0.5s ease-in-out;
+}
+.name-post {
+  margin-top: 16px;
+}
+.social-left a {
+  display: inline-block;
+  margin-right: 6px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  color: var(--color-green);
+  background: rgba(147, 107, 232, 0.05);
+  transition: all 0.3s;
+}
+.team-item:hover h3.name-post a {
+  color: var(--color-green);
+}
+.team-item:hover img {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-item .social .social-left a:hover {
+  background: var(--color-green);
+  color: white;
+}
+.team-title h3.name-post a {
+  color: var(--color-black);
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.team-title p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--color-gray);
+}
+.team-item .social {
+  margin-top: 16px;
+}
