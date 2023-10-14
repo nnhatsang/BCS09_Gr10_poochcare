@@ -79,3 +79,7 @@ p.dark,
 .dark .blog-details a.blog-decs,.dark a.url,.dark .page-item .page-link{
   color: white  ;
 }
+
+.dark h4{
+  color: white;
+}

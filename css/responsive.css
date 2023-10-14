@@ -36,8 +36,8 @@
   #banner .item {
     min-height: 440px;
   }
-  header a.nav-link:hover:before {
-    width: 0;
+  header a.nav-link::before {
+    position: static;
   }
   .nav-item .dropdown-menu::after {
     left: 50%;
@@ -51,8 +51,16 @@
   #banner .item {
     min-height: 500px;
   }
-  header a.nav-link:hover:before {
-    width: 0;
+  header a.nav-link::before {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-details a.blog-decs,
+  h3.name-post a {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
