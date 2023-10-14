@@ -130,11 +130,23 @@
     font-size: 17px !important;
   }
 }
-@media only screen and (max-width:667px) {
+@media only screen and (max-width: 667px) {
   form.justify-content-between button {
     flex-basis: 100%;
     display: block;
     width: 100%;
     margin-top: 16px;
+  }
+  .search-popup form input[type="search"] {
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+  .search-popup form button {
+    padding: 0 25px;
+    margin-top: 10px;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    border-radius: 6px;
   }
 }
