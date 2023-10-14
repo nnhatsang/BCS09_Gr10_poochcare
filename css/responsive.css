@@ -51,9 +51,6 @@
   #banner .item {
     min-height: 500px;
   }
-  header a.nav-link::before {
-    position: static;
-  }
 }
 
 @media (max-width: 767px) {
@@ -61,6 +58,9 @@
   h3.name-post a {
     font-size: 18px;
     line-height: 22px;
+  }
+  header a.nav-link::before {
+    position: static;
   }
 }
 
@@ -110,6 +110,9 @@
   .btn-style {
     padding: 12px 30px;
   }
+  header a.nav-link::before {
+    position: static;
+  }
 }
 
 @media (max-width: 992px) {
@@ -156,5 +159,8 @@
     line-height: 50px;
     width: 100%;
     border-radius: 6px;
+  }
+  header a.nav-link::before {
+    position: static;
   }
 }
