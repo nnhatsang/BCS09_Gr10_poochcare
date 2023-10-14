@@ -148,6 +148,9 @@ li a.btn__search {
   min-width: 13rem;
   padding: 0.5rem 0 0.3rem;
 }
+.navbar .dropdown-menu:focus {
+  border: none;
+}
 .nav-item .dropdown-menu::after {
   content: "";
   position: absolute;
