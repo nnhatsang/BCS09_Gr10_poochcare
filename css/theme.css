@@ -43,7 +43,7 @@ p.dark,
   left: 49%;
   z-index: 10;
 }
-.dark .dropdown-menu a.dropdown-item {
+.dark .dropdown-menu a.dropdown-item,.dark .item__tag h3  {
   color: #fafafa;
 }
 .dark .gg-sun {
