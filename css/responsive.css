@@ -32,14 +32,27 @@
     margin: 15px 0;
   }
 }
+@media (max-width: 440px) {
+  #banner .item {
+    min-height: 440px;
+  }
+  header a.nav-link:hover:before {
+    width: 0;
+  }
+  .nav-item .dropdown-menu::after {
+    left: 50%;
+  }
+}
 
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
-  header .nav-link::before,
-  .active .nav-link::before {
-    display: none;
+  #banner .item {
+    min-height: 500px;
+  }
+  header a.nav-link:hover:before {
+    width: 0;
   }
 }
 
@@ -47,19 +60,14 @@
   .container {
     max-width: 720px;
   }
-  header .nav-link::before,
-  .active .nav-link::before {
-    display: none;
+  #banner .item {
+    min-height: 580px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
-  }
-  header .nav-link::before,
-  .active .nav-link::before {
-    display: none;
   }
 }
 
@@ -68,77 +76,65 @@
     max-width: 1140px;
   }
 }
-
-/* dark */
-
-.dark .hny-title,
-.dark a.read,
-.dark .title-head,
-.dark .team-title h3.name-post a,
-.dark h6 a {
-  color: white;
-}
-.dark ul.list-services li p,
-.dark .plan__card-top h3 {
-  color: white !important;
-}
-p.dark,
-.dark .nav-link {
-  color: #fafafa;
-}
-.dark header,
-.dark#myBody,
-.dark .navbar-nav .dropdown-menu,
-.dark .area-box {
-  background: #151515;
-}
-.dark .area-box:hover {
-  background: #222;
-}
-.dark .navbar-nav .dropdown-menu {
-  border: 1px solid #333 !important;
-  background-color: #151515;
-}
-.dark .navbar-expand-lg .navbar-nav .dropdown-menu::after {
-  content: "";
-  width: 14px;
-  height: 14px;
-  background: #151515;
-  border: 1px solid #333;
-  display: block;
-  border-right: none;
-  border-bottom: none;
-  transform: translateX(-50%) rotateZ(45deg);
-  position: absolute;
-  top: -7px;
-  left: 49%;
-  z-index: 10;
-}
-.dark .dropdown-menu a.dropdown-item {
-  color: #fafafa;
-}
-.dark .gg-sun {
-  color: var(--color-gray) !important;
-  display: block;
+@media (max-width: 1080px) {
+  .hny-title {
+    font-size: 35px !important;
+    line-height: 40px;
+  }
 }
 
-.dark #switchButton .gg-moon {
-  display: none;
-  color: #404040;
+@media (max-width: 600px) {
+  .hny-title {
+    font-size: 32px !important;
+    line-height: 38px;
+  }
 }
-.dark li.offer__icon,
-.dark #features,
-.dark #feedback,
-.dark #plan,
-.dark #team {
-  background: #222222;
+
+@media (max-width: 378px) {
+  .hny-title {
+    font-size: 27px !important;
+    line-height: 32px;
+  }
 }
-.dark .plan__card-middle,
-.dark .plan__card-left,
-.dark .item,
-.dark .plan__card-right {
-  background: #151515;
+
+@media (max-width: 375px) {
+  .btn-white,
+  .btn-style {
+    padding: 12px 30px;
+  }
 }
-.dark a.read:hover {
-  color: var(--color-green);
+
+@media (max-width: 992px) {
+  .number__num p {
+    font-size: 40px !important;
+    line-height: 50px;
+  }
+
+  h4.number__text {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 737px) {
+  .number__num {
+    padding: 0 5px !important;
+  }
+
+  p.number__num {
+    font-size: 35px !important;
+    line-height: 38px;
+    margin-top: 20px;
+  }
+
+  h4.number__text {
+    font-size: 17px !important;
+  }
+}
+@media only screen and (max-width:667px) {
+  form.justify-content-between button {
+    flex-basis: 100%;
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+  }
 }

@@ -206,6 +206,7 @@ h4.number__text {
   background: white;
   border-radius: 6px;
   overflow: hidden;
+  margin-top: 20px;
 }
 .plan__card-left,
 .plan__card-right {
@@ -325,7 +326,7 @@ h4.number__text {
 .nutrition__play-button i:hover {
   scale: 1.1;
 }
-.pop-up-video {
+/* .pop-up-video {
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -371,7 +372,7 @@ h4.number__text {
 .button__close:focus {
   border: none;
   outline: none;
-}
+} */
 .prohibited-scroll {
   overflow: hidden;
 }
@@ -449,15 +450,18 @@ h4.number__text {
 }
 /* contact */
 
-.contact__form input {
+.contact__form input[type="email"] {
   background: #fff;
   border: 1px solid #ced4da;
   border-radius: 10px;
   height: 60px;
   padding: 0 20px;
   font-size: 1rem;
-  flex-basis: 70%;
+  flex-basis: 70% ;
   font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
 }
 .contact__form button {
   flex-basis: 27%;

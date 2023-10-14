@@ -1,0 +1,73 @@
+.page-item:first-child .page-link {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.page-link {
+  background-color: transparent !important;
+}
+.active > .page-link,
+.page-link.active {
+  background: unset;
+  color: var(--color-green) !important;
+}
+.pagination .page-link {
+  border: none;
+  border-radius: 0;
+  color: unset;
+}
+.pagination .page-link:hover {
+  background: transparent;
+  color: var(--color-green);
+}
+#bloglist .card {
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: 0 25px 98px 0 rgba(19, 19, 19, 0.03);
+}
+#bloglist .card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
+}
+#bloglist .card img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#bloglist {
+  background: rgba(147, 107, 232, 0.05);
+}
+.blog-details a.blog-decs {
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 600;
+  transition: all.3s ease;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+  color: black;
+}
+
+.blog-details a.blog-decs:hover {
+  color: var(--color-green);
+}
+a.url {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+}
+.author {
+  color: #999;
+}
+a.url:hover {
+  color: red;
+}
+.card-body {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}

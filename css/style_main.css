@@ -88,7 +88,7 @@ header .nav-link {
 .navbar-nav .nav-link.active {
   color: var(--color-green);
 }
-.navbar-nav a.nav-link:hover{
+.navbar-nav a.nav-link:hover {
   color: #189a46;
 }
 .nav-item {
@@ -311,6 +311,7 @@ input:checked + .mode-container i.gg-moon {
   transition: all 0.3s ease;
   visibility: hidden;
   opacity: 0;
+  z-index: 1000;
 }
 .backToTop:hover {
   background: var(--color-green);
@@ -379,8 +380,6 @@ footer ul li a:hover {
 }
 
 /* dark */
-
-
 
 /* --------- KEYFRAME -  ANIMATION ------------*/
 @keyframes ripple {
